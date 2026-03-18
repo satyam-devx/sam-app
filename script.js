@@ -66,7 +66,7 @@ function processCommand(command) {
 
     // Greetings
     if (command.includes('hello') || command.includes('hi sam')) {
-        response = "Hello Divyanshu Hero! How can I help you today?";
+        response = "Hello Satyam! How can I help you today?";
     } 
     else if (command.includes('how are you')) {
         response = "I am just a bunch of code, but I'm feeling fully charged! What about you?";
@@ -76,7 +76,7 @@ function processCommand(command) {
         response = "My name is SAM, your personal voice assistant.";
     }
     else if (command.includes('who created you') || command.includes('who made you')) {
-        response = "I was created by the one and only, Divyanshu Hero.";
+        response = "I was created by the one and only, Satyam.";
     }
     // Time and Date
     else if (command.includes('time')) {
