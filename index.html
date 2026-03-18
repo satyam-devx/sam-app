@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAM Voice Assistant</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+
+    <div class="app-container">
+        <header class="app-header">
+            <div class="logo-container">
+                <i class="fa-solid fa-robot" id="default-logo"></i>
+            </div>
+            <h1>SAM</h1>
+            <p>Your Personal Voice Assistant</p>
+        </header>
+
+        <main class="chat-display">
+            <div class="message user-message">
+                <span class="label">You:</span>
+                <p id="user-text">Tap the mic and say something...</p>
+            </div>
+
+            <div class="message sam-message">
+                <span class="label">SAM:</span>
+                <p id="sam-text">Waiting for your command...</p>
+            </div>
+        </main>
+
+        <footer class="controls">
+            <button id="mic-btn" class="mic-button">
+                <i class="fa-solid fa-microphone"></i>
+            </button>
+            <p id="status">Listening status...</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('./sw.js')
+                .then(reg => console.log('Service Worker Registered!', reg))
+                .catch(err => console.log('Service Worker registration failed: ', err));
+            });
+        }
+    </script>
+
+</body>
+</html>

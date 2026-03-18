@@ -1,0 +1,21 @@
+{
+  "name": "SAM Voice Assistant",
+  "short_name": "SAM",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#0d0d12",
+  "theme_color": "#00e5ff",
+  "description": "Your Personal AI Voice Assistant created by Divyanshu",
+  "icons": [
+    {
+      "src": "assets/logo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

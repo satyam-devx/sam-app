@@ -1,0 +1,165 @@
+/* Google Fonts se modern font import kar rahe hain */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #0d0d12; /* Deep dark background */
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* App ka main container mobile screen ke hisaab se */
+.app-container {
+    width: 100%;
+    max-width: 450px;
+    height: 100vh;
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 30px rgba(0, 229, 255, 0.1);
+}
+
+/* Header Section */
+.app-header {
+    text-align: center;
+    padding: 30px 20px 20px;
+    background: rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 0 0 20px 20px;
+}
+
+.logo-container i {
+    font-size: 55px;
+    color: #00e5ff; /* Neon Cyan */
+    margin-bottom: 10px;
+    text-shadow: 0 0 20px rgba(0, 229, 255, 0.6); /* Glow effect */
+}
+
+.app-header h1 {
+    font-size: 28px;
+    letter-spacing: 2px;
+    color: #fff;
+    font-weight: 600;
+}
+
+.app-header p {
+    font-size: 13px;
+    color: #8892b0;
+}
+
+/* Chat Display Area */
+.chat-display {
+    flex: 1;
+    padding: 25px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow-y: auto;
+}
+
+/* Common Message Box Style */
+.message {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 18px;
+    border-radius: 15px;
+    border-left: 4px solid #555;
+    backdrop-filter: blur(5px);
+}
+
+/* User ki message styling */
+.user-message {
+    border-left-color: #ff2a7a; /* Neon Pink */
+    margin-left: 20px;
+}
+
+/* SAM ki message styling */
+.sam-message {
+    border-left-color: #00e5ff; /* Neon Cyan */
+    background: rgba(0, 229, 255, 0.05);
+    margin-right: 20px;
+}
+
+.label {
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+}
+
+.user-message .label {
+    color: #ff2a7a;
+}
+
+.sam-message .label {
+    color: #00e5ff;
+}
+
+.message p {
+    font-size: 15px;
+    line-height: 1.5;
+    color: #e2e8f0;
+}
+
+/* Controls Section (Mic Area) */
+.controls {
+    padding: 30px 20px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 30px 30px 0 0;
+}
+
+/* Mic Button Design */
+.mic-button {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background: #00e5ff;
+    border: none;
+    color: #0d0d12;
+    font-size: 30px;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 0 0 20px rgba(0, 229, 255, 0.5);
+    transition: all 0.3s ease;
+    margin-bottom: 15px;
+}
+
+/* Hover effect */
+.mic-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(0, 229, 255, 0.8);
+}
+
+/* Jab SAM sune ga tab ye animation chalega (JS control karega) */
+.mic-button.listening {
+    animation: pulse 1.5s infinite;
+    background: #ff2a7a;
+    color: white;
+    box-shadow: 0 0 30px rgba(255, 42, 122, 0.6);
+}
+
+/* Pulse Animation ki coding */
+@keyframes pulse {
+    0% { transform: scale(1); box-shadow: 0 0 15px rgba(255, 42, 122, 0.5); }
+    50% { transform: scale(1.15); box-shadow: 0 0 40px rgba(255, 42, 122, 0.9); }
+    100% { transform: scale(1); box-shadow: 0 0 15px rgba(255, 42, 122, 0.5); }
+}
+
+#status {
+    font-size: 14px;
+    color: #8892b0;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+}
