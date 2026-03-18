@@ -14,6 +14,31 @@
 <body>
 
     <div class="app-container">
+
+        <!-- SETTINGS BUTTON -->
+        <button id="settings-btn" class="settings-btn">
+            <i class="fa-solid fa-gear"></i>
+        </button>
+
+        <!-- SETTINGS PANEL -->
+        <div id="settings-panel" class="settings-panel hidden">
+            <h3>SAM Settings</h3>
+            
+            <label for="voice-select">Change Voice:</label>
+            <select id="voice-select"></select>
+
+            <div class="toggle-container">
+                <label for="wake-word-toggle">Wake Word ("Hey SAM")</label>
+                <label class="switch">
+                    <input type="checkbox" id="wake-word-toggle">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+
+            <button id="close-settings">Save & Close</button>
+        </div>
+
+        <!-- HEADER -->
         <header class="app-header">
             <div class="logo-container">
                 <i class="fa-solid fa-robot" id="default-logo"></i>
@@ -22,6 +47,7 @@
             <p>Your Personal Voice Assistant</p>
         </header>
 
+        <!-- CHAT DISPLAY -->
         <main class="chat-display">
             <div class="message user-message">
                 <span class="label">You:</span>
@@ -34,12 +60,14 @@
             </div>
         </main>
 
+        <!-- CONTROLS -->
         <footer class="controls">
             <button id="mic-btn" class="mic-button">
                 <i class="fa-solid fa-microphone"></i>
             </button>
             <p id="status">Listening status...</p>
         </footer>
+
     </div>
 
     <script src="script.js"></script>
