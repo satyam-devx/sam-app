@@ -1,5 +1,5 @@
 // Cache ka naam aur version
-const CACHE_NAME = 'sam-voice-assistant-v1';
+const CACHE_NAME = 'sam-voice-assistant-v2';
 
 // Wo files jo offline use ke liye save (cache) karni hain
 const urlsToCache = [
